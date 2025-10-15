@@ -1,17 +1,18 @@
 package com.notfound.bookstore.repository;
 
-import com.notfound.bookstore.model.entity.Book;
+import com.notfound.bookstore.model.entity.Cart;
 import com.notfound.bookstore.model.entity.CartItem;
-import com.notfound.bookstore.model.entity.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+
 @Repository
-public interface OrderRepository extends JpaRepository<Order, UUID> {
+public interface CartItemRepository extends JpaRepository<CartItem, UUID> {
     // Tìm item trong giỏ theo book
     Optional<CartItem> findByCartIdAndBookId(UUID cartId, UUID bookId);
 
