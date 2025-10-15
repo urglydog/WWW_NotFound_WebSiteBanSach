@@ -1,4 +1,5 @@
 package com.notfound.bookstore.model.enums;
 
-public class UserRole {
+public enum Role {
+    GUEST, CUSTOMER, ADMIN
 }

@@ -1,5 +1,6 @@
 package com.notfound.bookstore.model.entity;
 
+import com.notfound.bookstore.model.enums.Role;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -15,6 +16,7 @@ import java.util.UUID;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @ToString(exclude = {"addresses", "reviews", "cart", "orders", "wishlist", "newsArticles"})
 public class User {
@@ -62,10 +64,6 @@ public class User {
 
     @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     List<News> newsArticles;
-
-    public enum Role {
-        GUEST, CUSTOMER, ADMIN
-    }
 
     public User(String username, String password, String email, Role role) {
         this.username = username;

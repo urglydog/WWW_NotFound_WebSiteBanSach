@@ -5,6 +5,7 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 import org.hibernate.annotations.UuidGenerator;
 
+import java.math.BigDecimal;
 import java.util.UUID;
 
 @Entity
@@ -40,10 +41,10 @@ public class Address {
     String province;
 
     @Column(precision = 10, scale = 7)
-    Double latitude;
+    BigDecimal latitude;
 
     @Column(precision = 10, scale = 7)
-    Double longitude;
+    BigDecimal  longitude;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
