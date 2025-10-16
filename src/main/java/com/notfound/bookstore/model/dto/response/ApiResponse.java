@@ -1,4 +1,4 @@
-package com.notfound.bookstore.model.dto.request;
+package com.notfound.bookstore.model.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
