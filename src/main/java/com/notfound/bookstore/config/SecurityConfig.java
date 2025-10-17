@@ -26,7 +26,8 @@ public class SecurityConfig {
             "/api/public/**",
             "/api/auth/login",
             "/api/auth/register",
-            "/api/auth/introspect"
+            "/api/auth/introspect",
+            "/api/review/book/{bookId}"
     };
 
     @Value("${jwt.signerKey}")

@@ -40,6 +40,7 @@ public enum ErrorCode {
     USERNAME_INVALID(HttpStatus.BAD_REQUEST, 2003, "Username must be at least 3 characters."),
     INVALID_PASSWORD(HttpStatus.BAD_REQUEST, 2004, "Password must be at least 8 characters."),
     INVALID_KEY(HttpStatus.BAD_REQUEST, 2005, "Invalid API key."),
+    INVALID_CREDENTIALS(HttpStatus.UNAUTHORIZED,1002, "Username or password fail"),
 
     // ==== Lỗi hệ thống không phân loại ====
     UNCATEGORIZED_EXCEPTION(HttpStatus.INTERNAL_SERVER_ERROR, 9999, "Uncategorized error");
